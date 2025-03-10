@@ -18,4 +18,9 @@ public class GreetingController {
                                  @RequestParam(required = false) String lastName) {
         return greetingService.saveGreeting(firstName, lastName);
     }
+
+    @GetMapping("/hello")  // Added a GET method to test in browser
+    public String testGreeting() {
+        return "Hello, Spring Boot is running!";
+    }
 }
